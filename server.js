@@ -3,6 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const userRoute = require("./routes/userRoute");
+
 const connectToDataBase = require("./database/mongoose.database");
 
 const app = express();
@@ -12,6 +14,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//Routes Middleware
+
+app.use("/api/user", userRoute);
 
 // routes
 app.get("/", (req, res) => {
