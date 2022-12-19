@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const userRoute = require("./routes/userRoute");
+const errorHandler = require("./middleWare/errorMiddleware");
 
 const connectToDataBase = require("./database/mongoose.database");
 
@@ -25,6 +26,9 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
+//Error middleware
+app.use(errorHandler);
 
 connectToDataBase();
 app.listen(PORT, () => {
