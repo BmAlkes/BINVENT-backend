@@ -21,7 +21,8 @@ const registerUser = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("Email has  already been registered");
     }
-    // create a user
+
+    // create a new  user
 
     const user = await User.create({
         name,
