@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const userRoute = require("./routes/userRoute");
 const errorHandler = require("./middleWare/errorMiddleware");
+const cookieParser = require("cookie-parser");
 
 const connectToDataBase = require("./database/mongoose.database");
 
@@ -13,6 +14,7 @@ app.use(cors());
 
 //middleware
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
