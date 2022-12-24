@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
             new Date().toISOString().replace(/:/g, "-") +
                 "-" +
                 file.originalname
-        ); // 23/08/2022
+        ); // 24/12/2022
     },
 });
 
