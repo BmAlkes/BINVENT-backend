@@ -12,7 +12,12 @@ const path = require("path");
 const connectToDataBase = require("./database/mongoose.database");
 
 const app = express();
-app.use(cors());
+app.use(
+    cors({
+        origin: ["http://localhost:3000", "https://binvent.vercel.app"],
+        credentials: true,
+    })
+);
 
 //middleware
 app.use(express.json());
@@ -23,7 +28,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 //Routes Middleware
 
-app.use("/api/user", userRoute);
+app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 
 // routes

@@ -7,6 +7,7 @@ const {
     getProducts,
     getProduct,
     deleteProduct,
+    updateProduct,
 } = require("../controller/productController");
 const { upload } = require("../utils/fileUploadMulter");
 

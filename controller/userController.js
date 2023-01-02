@@ -256,7 +256,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
     <p>Regards</p>
     <p>BInvent Team</p>
-    <img src=""/>
+    <img src="https://res.cloudinary.com/binvent/image/upload/v1671980945/BInvent%20App/Logo_4x_m9tjpe.png" width="800px" height="300"/>
     `;
 
     const subject = "Password Reset Request";

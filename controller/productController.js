@@ -118,7 +118,7 @@ const updateProduct = asyncHandler(async (req, res) => {
         let uploadedFile;
         try {
             uploadedFile = await cloudinary.uploader.upload(req.file.path, {
-                folder: "Pinvent App",
+                folder: "BInvent App",
                 resource_type: "image",
             });
         } catch (error) {
