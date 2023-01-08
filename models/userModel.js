@@ -26,7 +26,8 @@ const userSchema = mongoose.Schema(
         photo: {
             type: String,
             required: [true, "Please add a photo"],
-            default: "https://unsplash.com/photos/OKeu92CvolE",
+            default:
+                "https://res.cloudinary.com/binvent/image/upload/v1673096359/BInvent%20App/Qual-a-ordem-cronologica-dos-filmes-do-Batman-Deny-Freeman-Flickr_ttt5xu.jpg",
         },
         phone: {
             type: String,
